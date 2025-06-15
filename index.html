@@ -1825,18 +1825,7 @@
                 });
             }
 
-            function checkTimeAndToggleTheme() {
-                const now = new Date();
-                const hours = now.getHours();
-
-                if (hours >= 18 || hours < 6) {
-                    const userPreference = confirm('Já é noite! Deseja ativar o modo noturno?');
-                    if (userPreference) {
-                        document.body.dataset.theme = 'dark';
-                        document.querySelector('.header__theme-toggle').innerHTML = '<i class="fas fa-moon"></i> Tema';
-                    }
-                }
-            }
+            
 
             function preloadNextSlides() {
                 const nextSlideIndex = (state.currentSlide + 1) % config.series.length;
